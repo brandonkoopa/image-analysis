@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "check-version": "check-node-version --node '>=18.17.0'",
+    "dev": "npm run check-version && npm-run-all --parallel api next",
+    "start": "npm run check-version && next start -p 4001",
+    "api": "node api.js",
+    "next": "next dev -p 4001",
+    "test": "mocha \"src/**/*.test.js\""
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^4.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "multer": "^1.4.5-lts.1",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.7",
+    "@babel/register": "^7.25.9",
+    "check-node-version": "^4.2.1",
+    "concurrently": "^8.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.11.0",
+    "identity-obj-proxy": "^3.0.0",
+    "mocha": "^10.7.3",
+    "npm-run-all": "^4.1.5",
+    "sinon": "^19.0.2",
+    "supertest": "^7.0.0"
+  }
+}
