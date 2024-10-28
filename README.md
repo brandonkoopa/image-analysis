@@ -20,17 +20,30 @@ This project provides a REST API for uploading images, performing object detecti
 
 1. **Install `nvm`**:
 
+    If you don’t have `nvm` installed, you can install it with the following command:
+
     ```bash
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     ```
 
 2. **Load `nvm`**:
 
+    After installation, load `nvm` with:
+
     ```bash
     source ~/.nvm/nvm.sh
     ```
 
+    *Note:* To automatically load `nvm` in each new terminal session, add the following line to your shell profile (e.g., `.bashrc`, `.zshrc`):
+
+    ```bash
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    ```
+
 3. **Install and use Node.js version `18.17.0`**:
+
+    Run the following commands to install and switch to the correct version:
 
     ```bash
     nvm install 18.17.0
@@ -38,6 +51,8 @@ This project provides a REST API for uploading images, performing object detecti
     ```
 
 4. **Verify Node.js is installed**:
+
+    To confirm you’re using the correct Node.js version, check it with:
 
     ```bash
     node -v  # Should output v18.17.0 or higher
